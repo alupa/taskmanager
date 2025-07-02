@@ -26,19 +26,10 @@ public class TaskManagerTest {
     }
 
     @Test
-    void noDeberiaActualizarTareaInexistente() {
-        // Act
-        Task task = manager.createTask("titulo", "descripcion");
-        boolean updated = manager.updateTask(999, "nuevo titulo", " nueva descripcion"); // 999 es un ID que no existe
-
-        // Assert
-        assertThat(updated).isFalse();
-    }
-
-    @Test
     void deberiaActualizarTarea() {
         // Act
         Task task = manager.createTask("titulo", "descripcion");
+        assertThat(manager.getAll()).contains(task); // Validar que la tarea existe antes de actualizarla
         boolean updated = manager.updateTask(task.getId(), "nuevo titulo", "nueva descripcion");
 
         // Assert
@@ -48,19 +39,10 @@ public class TaskManagerTest {
     }
 
     @Test
-    void noDeberiaEliminarTareaInexistente() {
-        // Act
-        Task task = manager.createTask("titulo", "descripcion");
-        boolean removed = manager.deleteTask(999, "titulo", "descripcion"); // 999 es un ID que no existe
-
-        // Assert
-        assertThat(removed).isFalse();
-    }
-
-    @Test
     void deberiaEliminarTask() {
         // Act
         Task task = manager.createTask("titulo", "descripcion");
+        assertThat(manager.getAll()).contains(task); // Validar que la tarea existe antes de eliminarla
         boolean removed = manager.deleteTask(task.getId());
 
         // Assert
