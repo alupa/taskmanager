@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: cl.kibernumacademy.service.TaskManagerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! -- in cl.kibernumacademy.service.TaskManagerTest
-cl.kibernumacademy.service.TaskManagerTest -- Time elapsed: 0.006 s <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! -- in cl.kibernumacademy.service.TaskManagerTest
+cl.kibernumacademy.service.TaskManagerTest -- Time elapsed: 0.012 s <<< ERROR!
 java.lang.NoClassDefFoundError: TaskManager
 	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
 	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3473)
